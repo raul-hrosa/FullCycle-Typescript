@@ -167,7 +167,7 @@ describe("Order repository test", () => {
         expect(orderModel.toJSON()).toStrictEqual({
             id: foundOrder.id,
             customer_id: foundOrder.customerId,
-            total: foundOrder.total(),
+            total: foundOrder.total(), 
             items: [
                 {
                     id: foundOrder.items[0].id,

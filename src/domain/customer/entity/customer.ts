@@ -39,8 +39,8 @@ export default class Customer {
     }
 
     changeName(name: string) {
-        this.validate()
         this._name = name        
+        this.validate()
     }
 
     changeAddress(address: Address) {

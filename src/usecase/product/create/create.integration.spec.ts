@@ -3,7 +3,7 @@ import ProductModel from '../../../infra/product/repository/sequelize/product.mo
 import ProductRepository from '../../../infra/product/repository/sequelize/product.repository';
 import CreateProductUseCase from './create.product.usecase';
 
-describe("test fin customer usecase", () => {
+describe("test create produc usecase", () => {
     let sequelize: Sequelize;
 
     beforeEach(async () => {

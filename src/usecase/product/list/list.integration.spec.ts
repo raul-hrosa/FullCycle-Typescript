@@ -4,7 +4,7 @@ import ProductModel from '../../../infra/product/repository/sequelize/product.mo
 import ProductRepository from '../../../infra/product/repository/sequelize/product.repository';
 import ListProductUseCase from './list.product.usecase';
 
-describe("test fin customer usecase", () => {
+describe("test list product usecase", () => {
     let sequelize: Sequelize;
 
     beforeEach(async () => {
@@ -23,7 +23,7 @@ describe("test fin customer usecase", () => {
         await sequelize.close();
     });
 
-    it("should create a Product", async () => {
+    it("should list Products", async () => {
         const productRepository = new ProductRepository();
 
         const product1 = new Product("1", "Product 1", 100)

@@ -9,11 +9,15 @@ import AddressChangedEvent from '../event/address-changed.event'
 
 describe('Costumer unit tests', () => {
     it('should trow error when id is empty', () => {
-        expect(() => new Customer("", "Name"))
+        expect(() => new Customer("", "Name")).toThrowError("customer: Id is required")
     })
     
     it('should trow error when name is empty', () => {
-        expect(() => new Customer("123", ""))
+        expect(() => new Customer("123", "")).toThrowError("customer: Name is required")
+    })
+
+    it('should trow error when id and name are empty', () => {
+        expect(() => new Customer("", "")).toThrowError("customer: Id is required,customer: Name is required")
     })
 
     it('should change name', () => {
